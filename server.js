@@ -46,7 +46,15 @@ const start = async () => {
     await connectDB(process.env.MONGODB)
     app.listen(port, () => {
       console.log(
-        `server is running on port : ${port}\n🥭 successfully connected to MongoDB 🥭`
+        '\x1b[33m%s\x1b[0m',
+        '\n***************************************'
+      )
+      console.log(
+        `    server is running on port : \x1b[36m${port}\x1b[0m \n🥭 successfully connected to \x1b[36mMongoDB\x1b[0m 🥭`
+      )
+      console.log(
+        '\x1b[33m%s\x1b[0m',
+        '***************************************\n'
       )
     })
   } catch (error) {
