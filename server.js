@@ -32,7 +32,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-app.use(express.static(path.resolve(__dirname, '../jobify_front/build')))
+app.use(express.static(path.resolve(__dirname, './jobify_front/build')))
 
 app.use(express.json())
 app.use(helmet())
@@ -44,7 +44,7 @@ app.use('/api/v1/jobs', authenticatedUser, jobsRouter)
 
 app.get('*', function (request, response) {
   response.sendFile(
-    path.resolve(__dirname, '../jobify_front/build', 'index.html')
+    path.resolve(__dirname, './jobify_front/build', 'index.html')
   )
 })
 
