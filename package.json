@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build-client": "cd ./jobify_Front && npm run build",
+    "build-client": "cd jobify_Front && npm run build",
     "server": "nodemon server.js --ignore client",
-    "client": "cd ./jobify_Front && npm run start",
+    "client": "cd jobify_Front && npm run start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "keywords": [],
